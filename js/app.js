@@ -167,8 +167,8 @@ if (formEdit) {
         };
 
         try {
-             // Percobaan 6-3 Langkah 5
-             const res = await fetch(`${API_URL}?id=${id}`, {
+            // Percobaan 6-3 Langkah 5
+            const res = await fetch(`${API_URL}?id=${id}`, {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(payload)
@@ -176,7 +176,7 @@ if (formEdit) {
             const data = await res.json();
 
             if (res.ok && data.status === 'success') {
-             // Percobaan 6-3 Langkah 6   
+                // Percobaan 6-3 Langkah 6
                 showAlert(data.message, 'success');
                 closeEditModal();
                 loadMahasiswa(); // Refresh data otomatis
@@ -253,11 +253,11 @@ async function deleteMahasiswa(id, nama) {
 if (inputSearch) {
     let timer = null;
     inputSearch.addEventListener('input', function () {
-    // Percobaan 6-4 Langkah 5
-clearTimeout(timer);
-timer = setTimeout(() => {
-    loadMahasiswa(inputSearch.value.trim());
-}, 300);
+        // Percobaan 6-4 Langkah 5
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            loadMahasiswa(inputSearch.value.trim());
+        }, 300);
     });
 }
 
